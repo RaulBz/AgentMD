@@ -1,0 +1,60 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.python-version
+
+# Dependency management
+pip-log.txt
+Pipfile.lock
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs and runtime files
+*.log
+*.pid
+*.seed
+*.coverage
+coverage.xml
+*.lcov
+
+# Testing
+htmlcov/
+.pytest_cache/
+.coverage.*
+.tox/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Sensitive data
+*.env
+secrets.json
+credentials.json
+*.key
+*.pem
+
+# Project-specific
+scraped_data/
+*.csv
+*.jsonl
+*.db
+cache/
