@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentMD Chatbot</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            max-width: 700px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: #007BFF;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        .header img.logo {
+            max-width: 180px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .chat-box {
+            flex: 1;
+            padding: 20px;
+            height: 500px;
+            overflow-y: auto;
+            background: #f9fafb;
+        }
+
+        .message {
+            max-width: 80%;
+            margin: 10px 0;
+            padding: 12px 18px;
+            border-radius: 15px;
+            line-height: 1.4;
+            position: relative;
+            word-wrap: break-word;
+        }
+
+        .human {
+            background: #007BFF;
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 0;
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .ai {
+            background: #28A745;
+            color: white;
+            margin-right: auto;
+            border-bottom-left-radius: 0;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+        }
+
+        .form-container {
+            padding: 20px;
+            background: #ffffff;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            padding: 12px;
+            border: 1px solid #d0d0d0;
+            border-radius: 10px;
+            resize: none;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #007BFF;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* Scrollbar Styling */
+        .chat-box::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-box::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .chat-box::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .chat-box::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .chat-container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.2rem;
+            }
+
+            .chat-box {
+                height: 400px;
+                padding: 15px;
+            }
+
+            .message {
+                max-width: 90%;
+            }
+
+            textarea {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <img src="/static/logo.png" alt="AgentMD Logo" class="logo">
+            <h1>AgentMD Chatbot</h1>
+        </div>
+        <div class="chat-box" id="chat">
+            {% for msg_type, msg_content in messages %}
+                <div class="message {{ msg_type }}">{{ msg_content | replace('\n', '<br>') | safe }}</div>
+            {% endfor %}
+        </div>
+        <div class="form-container">
+            <form method="post" action="/chat">
+                <textarea name="message" placeholder="Ask me anything (e.g., Find top 3 cardiologists in Toronto)"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
