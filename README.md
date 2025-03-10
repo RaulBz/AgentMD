@@ -8,7 +8,7 @@ An LLM-powered assistant for medical queries. Find top doctors by specialty and 
 4. Copy `.env.example` to `.env` and add your API keys (see [docs/api_keys.md](docs/api_keys.md)).
 5. Run: `python agent_md.py`
 
-🚧 **Work in Progress** 🚧
+## 🚧 **Work in Progress** 🚧
 
 This project is currently under active development and at it's infancy. Features, API endpoints, and functionality may change frequently.  
 Expect breaking changes in the comming days.
