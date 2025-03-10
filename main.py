@@ -23,6 +23,7 @@ from typing import Literal
 import time
 from dotenv import load_dotenv
 from config import Config
+import requests
 
 # Load environment variables from .env file
 config = {'Model':"gemini-1.5-flash-latest"}
@@ -33,22 +34,6 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 HF_API_TOKEN = os.getenv("HF_API_TOKEN")
 if not GOOGLE_API_KEY or not HF_API_TOKEN:
     raise ValueError("API keys not found in .env file")
-
-
-
-# ===========================
-# CONFIGURE GEMINI MODEL
-# ===========================
-
-# The system instruction defines how the chatbot is expected to behave and includes
-# rules for when to call different functions, as well as rules for the conversation, such
-# as tone and what is permitted for discussion.
-
-# Try using different models. The `pro` models perform the best, especially
-# with tool-calling. The `flash` models are super fast, and are a good choice
-# if you need to use the higher free-tier quota.
-# Check out the features and quota differences here: https://ai.google.dev/pricing
-import requests
 
 class ChatBioGPT:
     def __init__(self, api_token, model="microsoft/biogpt"):
@@ -230,7 +215,7 @@ def fetch_doctors_tool(specialty: str, city: str, max_results: int = 3) -> str:
 def retrieve_reviews_tool(search_url: str) -> str:
     """
     The input is a string containing the url as a stringcorresponding to a doctor's profile to find all the reviews 
-    about the doctor on the website combine them and return them as a string
+    about the doctor on the website combine them and return them as a string.
     """
     print(f"Fetching data from: {search_url}")
     # Set up Selenium WebDriver options
