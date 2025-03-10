@@ -11,7 +11,7 @@ An LLM-powered assistant for medical queries. Find top doctors by specialty and 
 ## 🚧 **Work in Progress** 🚧
 
 This project is currently under active development and at it's infancy. Features, API endpoints, and functionality may change frequently.  
-Expect changes in the comming days.
+Expect changes in the comming days. The project structure will change to be more organized. With separate files for tools tools.py and graph defiinintion graph.py. And the Langraph graph will be expanded to have better flow beteen states. This should give users a better to have a more natural interaction with the chat.
 
 ## Data Disclaimer
 AgentMD is a proof-of-concept chatbot for educational purposes. Any web scraping functionality (e.g., fetching doctor data or reviews) is provided as-is. Users are responsible for complying with the terms of service, privacy policies, and applicable laws of any websites accessed. The author is not liable for misuse, data accuracy, or legal consequences arising from scraping or use of this code.
