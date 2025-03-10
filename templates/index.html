@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AgentMD Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chat-container { max-width: 600px; margin: auto; }
+        .message { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .human { background-color: #e0f7fa; }
+        .ai { background-color: #f1f8e9; }
+        .form-container { margin-top: 20px; }
+        textarea { width: 100%; height: 100px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>AgentMD Chatbot</h1>
+        <div id="chat">
+            {% for msg_type, msg_content in messages %}
+                <div class="message {{ msg_type }}">{{ msg_content | replace('\n', '<br>') | safe }}</div>
+            {% endfor %}
+        </div>
+        <div class="form-container">
+            <form method="post" action="/chat">
+                <textarea name="message" placeholder="Type your message here..."></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
