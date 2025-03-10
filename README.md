@@ -6,7 +6,7 @@ An LLM-powered assistant for medical queries. Find top doctors  in Ontario by sp
 2. Create a virtual env: `python -m venv venv && source venv/bin/activate`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Copy `.env.example` to `.env` and add your API keys (see [docs/api_keys.md](docs/api_keys.md)).
-5. Run: `python agent_md.py`
+5. Run: `python main.py` to use the chat on terminal or `python mainFastAPI.py` to use the chrome chat version.
 
 ## 🚧 **Work in Progress** 🚧
 
