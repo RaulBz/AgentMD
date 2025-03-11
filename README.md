@@ -1,55 +1,56 @@
 # AgentMD
 An LLM-powered assistant for medical queries. Find top doctors  in Ontario by specialty and city, explore patient reviews, and get tailored answers. Uses agentic tool selection and retrieval-augmented responses. Built with LangGraph, Python, and Google Gemini—flexible for future healthcare tools.
 
-## How to use AgentMD (Example Interaction):
+## How to Use AgentMD (Example Interaction)
 
 AgentMD helps you find top doctors in a city and dive into their reviews for detailed insights. Here’s an example of how to use it:
 
-**User**: Find the top 3 urologists in London.  
+**User**: Find the top 3 cardiologists in Chicago.  
 **AgentMD**:  
-Top 3 Urologists in London, Ontario:  
-1. Dr. Stephen Pautler  
-   Specialty: Urologist  
-   Location: St. Joseph's Hospital, 268 Grosvenor Street, London, ON  
-   Rating: 4.8 (30 reviews)  
-   Profile: https://www.ratemds.com/doctor-ratings/[id]/Dr-Stephen-Pautler-London-ON.html/  
+Top 3 Cardiologists in Chicago, IL:  
+1. Dr. Emily Carter  
+   Specialty: Cardiologist  
+   Location: Chicago Central Hospital, 123 Heartbeat Lane, Chicago, IL  
+   Rating: 4.9 (35 reviews)  
+   Profile: https://www.examplehealth.com/doctor-ratings/[id]/Dr-Emily-Carter-Chicago-IL.html/  
 
-2. Dr. Hassan Razvi  
-   Specialty: Urologist  
-   Location: St. Joseph's Hospital, 268 Grosvenor Street, London, ON  
-   Rating: 4.7 (25 reviews)  
-   Profile: https://www.ratemds.com/doctor-ratings/[id]/Dr-Hassan-Razvi-London-ON.html/  
+2. Dr. Michael Brooks  
+   Specialty: Cardiologist  
+   Location: Lakeview Medical Center, 456 Pulse Avenue, Chicago, IL  
+   Rating: 4.6 (28 reviews)  
+   Profile: https://www.examplehealth.com/doctor-ratings/[id]/Dr-Michael-Brooks-Chicago-IL.html/  
 
-3. Dr. Nicholas Power  
-   Specialty: Urologist  
-   Location: Victoria Hospital, 800 Commissioners Road East, London, ON  
-   Rating: 4.6 (20 reviews)  
-   Profile: https://www.ratemds.com/doctor-ratings/[id]/Dr-Nicholas-Power-London-ON.html/
+3. Dr. Sarah Lin  
+   Specialty: Cardiologist  
+   Location: Northside Heart Institute, 789 Rhythm Road, Chicago, IL  
+   Rating: 4.5 (22 reviews)  
+   Profile: https://www.examplehealth.com/doctor-ratings/[id]/Dr-Sarah-Lin-Chicago-IL.html/
 
-**User**: How many reviews does Dr. Stephen Pautler have, and do people think the post-operation is bad?  
+**User**: How many reviews does Dr. Emily Carter have, and do people think the post-operation is bad?  
 **AgentMD**:  
-Dr. Stephen Pautler has 30 reviews.  
+Dr. Emily Carter has 35 reviews.  
 Extracted Reviews:  
-- Review 1: "Dr. Pautler was excellent, but the post-operation recovery was tougher than expected—lots of swelling."  
-- Review 2: "The surgery went well, and post-op care was great. No complaints!"  
-- Review 3: "Post-operation was a bit painful, but Dr. Pautler’s team was supportive."  
-Summary: Some patients found post-operation challenging (e.g., swelling, pain), but others had a positive experience with good support.
+- Review 1: "Dr. Carter was amazing, but the post-operation recovery was tough—felt a lot of fatigue."  
+- Review 2: "The procedure went smoothly, and post-op care was excellent. Very happy!"  
+- Review 3: "Post-operation had some discomfort, but Dr. Carter checked in regularly, which helped."  
+Summary: Some patients experienced challenges post-operation (e.g., fatigue, discomfort), but others had a positive experience with attentive care.
 
-**User**: Does Dr. Hassan Razvi have experience with kidney stone treatment?  
-**AgentMD**:  
-Extracted Reviews:  
-- Review 1: "Dr. Razvi handled my kidney stone surgery with precision. Highly recommend!"  
-- Review 2: "Had a great experience with Dr. Razvi for kidney stone removal—very knowledgeable."  
-Summary: Yes, Dr. Hassan Razvi has experience with kidney stone treatment, and patients report positive outcomes.
-
-**User**: Did Dr. Nicholas Power’s surgery leave a scar?  
+**User**: Does Dr. Michael Brooks have experience with heart valve surgery?  
 **AgentMD**:  
 Extracted Reviews:  
-- Review 1: "The surgery with Dr. Power went well, but it did leave a small scar."  
-- Review 2: "Minimally invasive procedure—no noticeable scarring!"  
+- Review 1: "Dr. Brooks performed my heart valve surgery with great skill—recovery was quick!"  
+- Review 2: "Had heart valve surgery with Dr. Brooks; he explained everything clearly and did a fantastic job."  
+Summary: Yes, Dr. Michael Brooks has experience with heart valve surgery, and patients report positive outcomes.
+
+**User**: Did Dr. Sarah Lin’s surgery leave a scar?  
+**AgentMD**:  
+Extracted Reviews:  
+- Review 1: "Dr. Lin’s surgery was successful, but it left a small scar on my chest."  
+- Review 2: "The procedure was minimally invasive—barely any scarring!"  
 Summary: Experiences vary; some patients report a small scar, while others mention minimal or no scarring.
 
 Try it out by running `python main.py` (terminal) or `python mainFastAPI.py` (web interface at `http://localhost:8000`)!
+
 ## Setup
 1. Clone the repo: `git clone git@github.com:yourusername/AgentMD.git`
 2. Create a virtual env: `python -m venv venv && source venv/bin/activate`
