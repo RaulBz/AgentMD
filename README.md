@@ -5,48 +5,48 @@ An LLM-powered assistant for medical queries. Find top doctors  in Ontario by sp
 
 AgentMD helps you find top doctors in a city and dive into their reviews for detailed insights. Here’s an example of how to use it:
 
-**User**: Find the top 3 cardiologists in Chicago.  
+**User**: Find the top 3 urologists in Ottawa.  
 **AgentMD**:  
-Top 3 Cardiologists in Chicago, IL:  
-1. Dr. Emily Carter  
-   Specialty: Cardiologist  
-   Location: Chicago Central Hospital, 123 Heartbeat Lane, Chicago, IL  
-   Rating: 4.9 (35 reviews)  
-   Profile: https://www.examplehealth.com/doctor-ratings/[id]/Dr-Emily-Carter-Chicago-IL.html/  
+Top 3 Urologists in Ottawa, ON:  
+1. Dr. James Taylor  
+   Specialty: Urologist  
+   Location: Ottawa Riverside Clinic, 150 Wellness Drive, Ottawa, ON  
+   Rating: 4.8 (30 reviews)  
+   Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-James-Taylor-Ottawa-ON.html/  
 
-2. Dr. Michael Brooks  
-   Specialty: Cardiologist  
-   Location: Lakeview Medical Center, 456 Pulse Avenue, Chicago, IL  
-   Rating: 4.6 (28 reviews)  
-   Profile: https://www.examplehealth.com/doctor-ratings/[id]/Dr-Michael-Brooks-Chicago-IL.html/  
+2. Dr. Laura Bennett  
+   Specialty: Urologist  
+   Location: Ottawa Riverside Clinic, 150 Wellness Drive, Ottawa, ON  
+   Rating: 4.7 (25 reviews)  
+   Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-Laura-Bennett-Ottawa-ON.html/  
 
-3. Dr. Sarah Lin  
-   Specialty: Cardiologist  
-   Location: Northside Heart Institute, 789 Rhythm Road, Chicago, IL  
-   Rating: 4.5 (22 reviews)  
-   Profile: https://www.examplehealth.com/doctor-ratings/[id]/Dr-Sarah-Lin-Chicago-IL.html/
+3. Dr. Robert Evans  
+   Specialty: Urologist  
+   Location: Capital Health Center, 300 Harmony Street, Ottawa, ON  
+   Rating: 4.6 (20 reviews)  
+   Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-Robert-Evans-Ottawa-ON.html/
 
-**User**: How many reviews does Dr. Emily Carter have, and do people think the post-operation is bad?  
+**User**: How many reviews does Dr. James Taylor have, and do people think the post-operation is bad?  
 **AgentMD**:  
-Dr. Emily Carter has 35 reviews.  
+Dr. James Taylor has 30 reviews.  
 Extracted Reviews:  
-- Review 1: "Dr. Carter was amazing, but the post-operation recovery was tough—felt a lot of fatigue."  
-- Review 2: "The procedure went smoothly, and post-op care was excellent. Very happy!"  
-- Review 3: "Post-operation had some discomfort, but Dr. Carter checked in regularly, which helped."  
-Summary: Some patients experienced challenges post-operation (e.g., fatigue, discomfort), but others had a positive experience with attentive care.
+- Review 1: "Dr. Taylor was excellent, but the post-operation recovery was tougher than expected—lots of swelling."  
+- Review 2: "The surgery went well, and post-op care was great. No complaints!"  
+- Review 3: "Post-operation was a bit painful, but Dr. Taylor’s team was supportive."  
+Summary: Some patients found post-operation challenging (e.g., swelling, pain), but others had a positive experience with good support.
 
-**User**: Does Dr. Michael Brooks have experience with heart valve surgery?  
-**AgentMD**:  
-Extracted Reviews:  
-- Review 1: "Dr. Brooks performed my heart valve surgery with great skill—recovery was quick!"  
-- Review 2: "Had heart valve surgery with Dr. Brooks; he explained everything clearly and did a fantastic job."  
-Summary: Yes, Dr. Michael Brooks has experience with heart valve surgery, and patients report positive outcomes.
-
-**User**: Did Dr. Sarah Lin’s surgery leave a scar?  
+**User**: Does Dr. Laura Bennett have experience with kidney stone treatment?  
 **AgentMD**:  
 Extracted Reviews:  
-- Review 1: "Dr. Lin’s surgery was successful, but it left a small scar on my chest."  
-- Review 2: "The procedure was minimally invasive—barely any scarring!"  
+- Review 1: "Dr. Bennett handled my kidney stone surgery with precision. Highly recommend!"  
+- Review 2: "Had a great experience with Dr. Bennett for kidney stone removal—very knowledgeable."  
+Summary: Yes, Dr. Laura Bennett has experience with kidney stone treatment, and patients report positive outcomes.
+
+**User**: Did Dr. Robert Evans’s surgery leave a scar?  
+**AgentMD**:  
+Extracted Reviews:  
+- Review 1: "The surgery with Dr. Evans went well, but it did leave a small scar."  
+- Review 2: "Minimally invasive procedure—no noticeable scarring!"  
 Summary: Experiences vary; some patients report a small scar, while others mention minimal or no scarring.
 
 Try it out by running `python main.py` (terminal) or `python mainFastAPI.py` (web interface at `http://localhost:8000`)!
