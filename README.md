@@ -68,6 +68,28 @@ Expect changes in the comming days. The project structure will change to be more
 3. Access to clinical tryal data.
 4. Feature that let's you describe the ideal specialist and will go throught reviews and match your prefference to a specialist.
 
+## LangGraph Architecture
+
+Below is a diagram of the current LangGraph workflow for AgentMD, generated from the code:
+
+![AgentMD LangGraph](agentmd_graph.png)
+
+### Explanation
+- **start**: The entry point of the graph.
+- **chatbot**: Processes user input, decides if a tool is needed (via `maybe_route_to_tools`), and generates responses.
+- **tools**: Executes `fetch_doctors_tool` or `retrieve_reviews_tool` when called.
+- **human**: Accepts user input (terminal in `main.py`, HTTP in `mainFastAPI.py`).
+- **end**: Terminates the graph when no further action is needed.
+- **Edges**: 
+  - `start → chatbot`: Initial entry.
+  - `chatbot → tools` if a tool call is detected.
+  - `chatbot → human` for user input.
+  - `chatbot → end` if no tool call.
+  - `tools → chatbot` after execution.
+- **Note**: The FastAPI version handles "human" input via web requests.
+
+This structure supports queries like "Find the top 3 urologists in London" and follow-up questions.
+
 ## Data Disclaimer
 AgentMD is a proof-of-concept chatbot for educational purposes. Any web scraping functionality (e.g., fetching doctor data or reviews) is provided as-is. Users are responsible for complying with the terms of service, privacy policies, and applicable laws of any websites accessed. The author is not liable for misuse, data accuracy, or legal consequences arising from scraping or use of this code.
 
