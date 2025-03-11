@@ -5,7 +5,7 @@ An LLM-powered assistant for medical queries. Find top doctors  in Ontario by sp
 
 AgentMD helps you find top doctors in a city and dive into their reviews for detailed insights. Here’s an example of how to use it:
 
-**User**: 
+**User**:  
 Find the top 3 urologists in Ottawa.  
 **AgentMD**:  
 Top 3 Urologists in Ottawa, ON:  
@@ -27,7 +27,7 @@ Top 3 Urologists in Ottawa, ON:
    Rating: 4.6 (20 reviews)  
    Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-Robert-Evans-Ottawa-ON.html/
 
-**User**: 
+**User**:  
 How many reviews does Dr. James Taylor have, and do people think the post-operation is bad?  
 **AgentMD**:  
 Dr. James Taylor has 30 reviews.  
@@ -37,7 +37,7 @@ Extracted Reviews:
 - Review 3: "Post-operation was a bit painful, but Dr. Taylor’s team was supportive."  
 Summary: Some patients found post-operation challenging (e.g., swelling, pain), but others had a positive experience with good support.
 
-**User**: 
+**User**:  
 Does Dr. Laura Bennett have experience with kidney stone treatment?  
 **AgentMD**:  
 Extracted Reviews:  
@@ -45,7 +45,7 @@ Extracted Reviews:
 - Review 2: "Had a great experience with Dr. Bennett for kidney stone removal—very knowledgeable."  
 Summary: Yes, Dr. Laura Bennett has experience with kidney stone treatment, and patients report positive outcomes.
 
-**User**: 
+**User**:  
 Did Dr. Robert Evans’s surgery leave a scar?  
 **AgentMD**:  
 Extracted Reviews:  
