@@ -68,7 +68,7 @@ Expect changes in the comming days. The project structure will change to be more
 3. Access to clinical tryal data.
 4. Feature that let's you describe the ideal specialist and will go throught reviews and match your prefference to a specialist.
 
-## LangGraph Architecture
+## Agent MD LangGraph Architecture
 
 Below is a diagram of the current LangGraph workflow for AgentMD, generated from the code:
 
