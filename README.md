@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <img src="images/Agent_MD_logo.png" alt="AgentMD Logo" width="200"/>
 </p>
 
