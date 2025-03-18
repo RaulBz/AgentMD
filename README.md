@@ -83,7 +83,7 @@ Expect changes in the comming days. The project structure will change to be more
 
 Below is a diagram of the current LangGraph workflow for AgentMD, generated from the code:
 
-![AgentMD LangGraph](agentmd_graph.png)
+![AgentMD LangGraph](images/agentmd_graph.png)
 
 ### Explanation
 - **start**: The entry point of the graph.
