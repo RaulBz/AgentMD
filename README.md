@@ -3,55 +3,57 @@ An LLM-powered assistant for medical queries. Find top doctors  in Ontario by sp
 
 ## How to Use AgentMD (Example Interaction)
 
-AgentMD helps you find top doctors in a city and dive into their reviews for detailed insights. Here’s an example of how to use it:
+AgentMD helps you find top doctors in a city and dive into their reviews for detailed insights. Here’s an example:
 
-**User**:  
-Find the top 3 urologists in Ottawa.  
+---
+
+**User**: Find the top 3 urologists in Ottawa.  
 **AgentMD**:  
-Top 3 Urologists in Ottawa, ON:  
-1. Dr. James Taylor  
-   Specialty: Urologist  
-   Location: Ottawa Riverside Clinic, 150 Wellness Drive, Ottawa, ON  
-   Rating: 4.8 (30 reviews)  
-   Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-James-Taylor-Ottawa-ON.html/  
+Here are the top 3 urologists in Ottawa, ON:  
 
-2. Dr. Laura Bennett  
-   Specialty: Urologist  
-   Location: Ottawa Riverside Clinic, 150 Wellness Drive, Ottawa, ON  
-   Rating: 4.7 (25 reviews)  
-   Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-Laura-Bennett-Ottawa-ON.html/  
+1. **Dr. James Taylor**  
+   - **Location**: Ottawa Riverside Clinic, 150 Wellness Drive  
+   - **Rating**: 4.8 (30 reviews)  
+   - **Profile**: [Dr. James Taylor](https://www.examplemed.com/doctor-ratings/[id]/Dr-James-Taylor-Ottawa-ON.html)  
 
-3. Dr. Robert Evans  
-   Specialty: Urologist  
-   Location: Capital Health Center, 300 Harmony Street, Ottawa, ON  
-   Rating: 4.6 (20 reviews)  
-   Profile: https://www.examplemed.com/doctor-ratings/[id]/Dr-Robert-Evans-Ottawa-ON.html/
+2. **Dr. Laura Bennett**  
+   - **Location**: Ottawa Riverside Clinic, 150 Wellness Drive  
+   - **Rating**: 4.7 (25 reviews)  
+   - **Profile**: [Dr. Laura Bennett](https://www.examplemed.com/doctor-ratings/[id]/Dr-Laura-Bennett-Ottawa-ON.html)  
 
-**User**:  
-How many reviews does Dr. James Taylor have, and do people think the post-operation is bad?  
+3. **Dr. Robert Evans**  
+   - **Location**: Capital Health Center, 300 Harmony Street  
+   - **Rating**: 4.6 (20 reviews)  
+   - **Profile**: [Dr. Robert Evans](https://www.examplemed.com/doctor-ratings/[id]/Dr-Robert-Evans-Ottawa-ON.html)  
+
+---
+
+**User**: How many reviews does Dr. James Taylor have, and do people think the post-operation is bad?  
 **AgentMD**:  
-Dr. James Taylor has 30 reviews.  
-Extracted Reviews:  
-- Review 1: "Dr. Taylor was excellent, but the post-operation recovery was tougher than expected—lots of swelling."  
-- Review 2: "The surgery went well, and post-op care was great. No complaints!"  
-- Review 3: "Post-operation was a bit painful, but Dr. Taylor’s team was supportive."  
-Summary: Some patients found post-operation challenging (e.g., swelling, pain), but others had a positive experience with good support.
+- **Reviews**: Dr. James Taylor has 30 reviews.  
+- **Post-Operation Feedback**:  
+  - _"Dr. Taylor was excellent, but the post-operation recovery was tougher than expected—lots of swelling."_  
+  - _"The surgery went well, and post-op care was great. No complaints!"_  
+  - _"Post-operation was a bit painful, but Dr. Taylor’s team was supportive."_  
+- **Summary**: Some patients found post-operation challenging (e.g., swelling, pain), but others had a positive experience with good support.
 
-**User**:  
-Does Dr. Laura Bennett have experience with kidney stone treatment?  
-**AgentMD**:  
-Extracted Reviews:  
-- Review 1: "Dr. Bennett handled my kidney stone surgery with precision. Highly recommend!"  
-- Review 2: "Had a great experience with Dr. Bennett for kidney stone removal—very knowledgeable."  
-Summary: Yes, Dr. Laura Bennett has experience with kidney stone treatment, and patients report positive outcomes.
+---
 
-**User**:  
-Did Dr. Robert Evans’s surgery leave a scar?  
+**User**: Does Dr. Laura Bennett have experience with kidney stone treatment?  
 **AgentMD**:  
-Extracted Reviews:  
-- Review 1: "The surgery with Dr. Evans went well, but it did leave a small scar."  
-- Review 2: "Minimally invasive procedure—no noticeable scarring!"  
-Summary: Experiences vary; some patients report a small scar, while others mention minimal or no scarring.
+- **Feedback**:  
+  - _"Dr. Bennett handled my kidney stone surgery with precision. Highly recommend!"_  
+  - _"Had a great experience with Dr. Bennett for kidney stone removal—very knowledgeable."_  
+- **Summary**: Yes, Dr. Laura Bennett has experience with kidney stone treatment, with positive patient outcomes.
+
+---
+
+**User**: Did Dr. Robert Evans’s surgery leave a scar?  
+**AgentMD**:  
+- **Feedback**:  
+  - _"The surgery with Dr. Evans went well, but it did leave a small scar."_  
+  - _"Minimally invasive procedure—no noticeable scarring!"_  
+- **Summary**: Experiences vary; some report a small scar, while others mention minimal or no scarring.
 
 Try it out by running `python main.py` (terminal) or `python mainFastAPI.py` (web interface at `http://localhost:8000`)!
 
