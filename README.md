@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/Agent_MD_logo.png" alt="AgentMD Logo" width="200"/>
+</p>
+
 # AgentMD
 An LLM-powered assistant for medical queries. Find top doctors  in Ontario by specialty and city, explore patient reviews, and get tailored answers. Uses agentic tool selection and retrieval-augmented responses. Built with LangGraph, Python, and Google Gemini—flexible for future healthcare tools.
 
