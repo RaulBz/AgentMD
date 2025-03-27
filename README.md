@@ -7,6 +7,10 @@ An LLM-powered assistant for medical queries. Find top doctors  in Ontario by sp
 
 AgentMD helps you find top doctors in a city and dive into their reviews for detailed insights. Here’s an example:
 
+
+<p align="center">
+  <img src="assets/Agent_MD_demo.png" alt="AgentMD Demo" width="700"/>
+</p>
 ---
 
 **User**: Find the top 3 urologists in Ottawa.  
