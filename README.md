@@ -9,7 +9,10 @@ AgentMD helps you find top doctors in a city and dive into their reviews for det
 
 
 <p align="center">
-  <img src="images/Agent_MD_demo.png" alt="AgentMD Demo" width="900"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/AgentMD_Logo_DM.png">
+    <img src="images/AgentMD_Logo.png" alt="AgentMD Logo" width="550"/>
+  </picture>
 </p>
 
 Try it out by running `python main.py` (terminal) or `python mainFastAPI.py` (web interface at `http://localhost:8000`)!
